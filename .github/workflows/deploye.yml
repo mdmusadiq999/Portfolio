@@ -12,15 +12,15 @@ jobs:
 
     steps:
       - name: Checkout repo
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3  # Update to v3 to ensure support for modern Node.js versions
 
       - name: Setup Node
-        uses: actions/setup-node@v1
+        uses: actions/setup-node@v3  # Update to v3 to avoid deprecated versions
         with:
-          node-version: 18
+          node-version: 18  # Keep it at Node.js 18, or use 20 if necessary
 
       - name: Install dependencies
-        uses: bahmutov/npm-install@v1
+        run: npm install  # Use npm install instead of a third-party action
 
       - name: Build project
         run: npm run build
