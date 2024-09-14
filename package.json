@@ -1,16 +1,19 @@
 {
-  "homepage": "http//mdmusadiq999.github.io/project_3D_developer_portfolio-main",
+  
   "name": "3dfolio",
   "private": true,
   "version": "0.0.0",
   "type": "module",
+
+ 
+ 
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
-    "preview": "vite preview"
+    "clean": "rmdir /s /q dist",
+    "clean-build": "npm run clean && npm run build"
   },
+
   "dependencies": {
     "@emailjs/browser": "^3.10.0",
     "@react-three/drei": "^9.56.24",
