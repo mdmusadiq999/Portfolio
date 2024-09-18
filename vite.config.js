@@ -3,9 +3,10 @@ import react from '@vitejs/plugin-react';
 
 export default defineConfig({
   plugins: [react()],
-  build: {
-    rollupOptions: {
-      external: ['react-dom/client']
+  resolve: {
+    alias: {
+      // Ensure correct resolution of React and React-DOM
+      'react-dom/client': 'react-dom'
     }
   }
 });
